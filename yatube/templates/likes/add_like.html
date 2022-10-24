@@ -1,0 +1,64 @@
+{% load likes_post %}
+{% load static %}
+
+
+{% is_liked post_id as is_liked_bool %}
+{% count_likes post_id as likes_counter %}
+
+{% if is_liked_bool %}
+    {% post_likes_id post_id as post_likes_id %}
+{% endif %}
+
+<form 
+    method="post" 
+    {% if not is_liked_bool %} 
+        class="add-remove-post-like add-post-like"
+        action="{% url 'likes:add' %}"
+    {% else %}
+        class="add-remove-post-like remove-post-like"
+        action="{% url 'likes:remove' %}"
+    {% endif %}
+>   
+    {% csrf_token %}
+
+    <input 
+    type="hidden" 
+    name="post_id" 
+    value="{{ post_id }}"
+    >
+    <input 
+    type="hidden" 
+    name="user_id" 
+    value="{% if user.is_authenticated %} {{ request.user.id }} 
+    {% else %} None
+    {% endif %}"
+    >
+    <input 
+    type="hidden" 
+    name="post_likes_id" 
+    value="{{ post_likes_id }}"
+    >
+    <input 
+    type="hidden" 
+    name="url_from" 
+    value="{{ request.path }}"
+    >
+
+    <div class='like-btn-wrap'>
+        {% if not is_liked_bool %}
+            <button class="heart-button">
+                <div class="heart-flip"></div>
+                <span>Like<span>d-</span></span><span> 
+                    {{ likes_counter }}
+                </span>
+            </button>
+        {% else %}
+            <button class="heart-button active">
+                <div class="heart-flip"></div>
+                <span>Like<span>d-</span></span><span> 
+                    {{ likes_counter }}
+                </span>
+            </button>
+        {% endif %}
+    </div>
+</form>

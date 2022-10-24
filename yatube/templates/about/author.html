@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% block title %}Об авторе проекта{% endblock %}
+{% block content %}
+<h1>Привет, я автор</h1>
+<h5> Незнаю, что бы вы хотели здесь увидеть, поэтому накидаю вам разного контента</h5>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item"> {# films accord. #}
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button 
+      class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#flush-collapseOne" 
+      aria-expanded="false" 
+      aria-controls="flush-collapseOne">
+        Рекомендую посмотреть эти фильмы 🍿
+      </button>
+    </h2>
+    <div 
+    id="flush-collapseOne" 
+    class="accordion-collapse collapse" 
+    aria-labelledby="flush-headingOne" 
+    data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <div class="container my-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+            <div class="col"> {# first - card #}
+              <div class="card">
+                <img src="https://linfotoutcourt.com/wp-content/uploads/2020/08/couv-5.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Interstellar</h5>
+                  <p class="card-text">Посмотрел около 20 раз</p>
+                  <a href="https://www.kinopoisk.ru/film/258687/" class="btn btn-primary">смотреть</a>
+                </div> {# card.body - 1 #}
+              </div> {# card #}
+            </div> {# col #}
+            <div class="col"> {# second #}
+              <div class="card">
+                <img src="https://static.okko.tv/images/v2/16450583?scale=1&quality=80" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Contact</h5>
+                  <p class="card-text">Interstellar из прошлого века, не смотря на то, что фильм 1997 года, снят очень достойно. </p>
+                  <a href="https://www.kinopoisk.ru/film/1950/" class="btn btn-primary">Смотреть</a>
+                </div> {# card.body - 2 #}
+              </div> {# card #}
+            </div> {# col #}
+            <div class="col"> {# third #}
+              <div class="card">
+                <img src="https://cutinsight.com/wp-content/uploads/2020/12/MA8cG19.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Во всё тяжкое</h5>
+                  <p class="card-text">Немножко мотивации от Джонни Деппа</p>
+                  <a href="https://www.kinopoisk.ru/film/1047881/" class="btn btn-primary">Смотреть</a>
+                </div> {# card.body - 3 #}
+              </div> {# card #}
+            </div> {# col #}
+          </div> {# row #}
+        </div> {# container #}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item"> {# serials accord. #}
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button 
+      class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#flush-collapseTwo" 
+      aria-expanded="false" 
+      aria-controls="flush-collapseTwo">
+        И вот эти серилы 🍿
+      </button>
+    </h2>
+    <div 
+    id="flush-collapseTwo" 
+    class="accordion-collapse collapse" 
+    aria-labelledby="flush-headingTwo" 
+    data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <div class="container my-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+            <div class="col"> {# first #}
+              <div class="card">
+                <img src="https://i.ytimg.com/vi/ahkJEOps_Vo/maxresdefault.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">11.22.63</h5>
+                  <p class="card-text">Все бы мы хотели побывать в Америке 60-ых, не так ли?</p>
+                  <a href="https://www.kinopoisk.ru/series/891337/" class="btn btn-primary">Смотреть</a>
+                </div> {# card.body - 1 #}
+              </div> {# card #}
+            </div> {# col #}
+            <div class="col"> {# second #}
+              <div class="card">
+                <img src="https://thumbs.dfs.ivi.ru/storage37/contents/6/c/46682748417d8cbdd42db4c89ab4d3.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Мир дикого запада</h5>
+                  <p class="card-text">А так же застать время, когда ИИ не только пройдет тест тьюринга, но и будет находится в человеческой оболочке.</p>
+                  <a href="https://www.kinopoisk.ru/series/195523/" class="btn btn-primary">смотреть </a>
+                </div> {# card.body - 2 #}
+              </div> {# card #}
+            </div> {# col #}
+            <div class="col"> {# third #}
+              <div class="card">
+                <img src="https://flxt.tmsimg.com/assets/p8630071_b_h8_bc.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Suits</h5>
+                  <p class="card-text">Просто люблю этот сериал)</p>
+                  <a href="https://www.kinopoisk.ru/series/557806/" class="btn btn-primary">смотреть</a>
+                </div> {# card.body - 3 #}
+              </div> {# card #}
+            </div> {# col #}
+          </div> {# row #}
+        </div> {# container #}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item"> {# musics accord. #}
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button 
+      class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#flush-collapseThree" 
+      aria-expanded="false" 
+      aria-controls="flush-collapseThree">
+        А также предлагаю послушать эти альбомы 🎧
+      </button>
+    </h2>
+    <div 
+    id="flush-collapseThree" 
+    class="accordion-collapse collapse" 
+    aria-labelledby="flush-headingThree" 
+    data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <div class="container my-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+            <div class="col"> {# first #}
+              <div class="card">
+                <img src="https://i.ytimg.com/vi/usGDhqONAw8/maxresdefault.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Denis Stelmakh - Ambience</h5>
+                  <p class="card-text">Начнем погружение в неоклассику, первый альбом от русского композитора</p>
+                  <a href="https://www.youtube.com/watch?v=usGDhqONAw8&t=2863s" class="btn btn-primary">Слшуать</a>
+                </div> {# card.body - 1 #}
+              </div> {# card #}
+            </div> {# col #}
+            <div class="col"> {# second #}
+              <div class="card">
+                <img src="https://www.denovali.com/carloscipa/back.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Carlos Cipa - All Your Life You Walk</h5>
+                  <p class="card-text">Прекрасный альбом немецкого композитора</p>
+                  <a href="https://www.youtube.com/watch?v=dyvvGYAKg_c" class="btn btn-primary">Слшуать</a>
+                </div> {# card.body - 2 #}
+              </div> {# card #}
+            </div> {# col #}
+            <div class="col"> {# third #}
+              <div class="card">
+                <img src="https://source.boomplaymusic.com/group10/M00/09/02/2598fd9201f74cc3b61b711c112b48f6.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Bruno Bavota - Apartments Song Vol.1</h5>
+                  <p class="card-text">На очереди альбом из Италии</p>
+                  <a href="https://www.youtube.com/watch?v=H8IPo3nWD24&list=OLAK5uy_mcahOQoEjvEirA7qkaJLxjQxH28IczmPo" class="btn btn-primary">Слушать</a>
+                </div> {# card.body - 3 #}
+              </div> {# card #}
+            </div> {# col #}
+          </div> {# row #}
+        </div> {# container #}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item"> {# books accord. #}
+    <h2 class="accordion-header" id="flush-headingFour">
+      <button 
+      class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#flush-collapseFour" 
+      aria-expanded="false" 
+      aria-controls="flush-collapseFour">
+        Куда без книг 📚
+      </button>
+    </h2>
+    <div 
+    id="flush-collapseFour" 
+    class="accordion-collapse collapse" 
+    aria-labelledby="flush-headingFour" 
+    data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> 
+        <div class="container my-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+            <div class="col"> {# first #}
+              <div class="card">
+                <img src="https://img.artlebedev.ru/everything/alpina/atlant/atlant.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Атлант расправил плечи</h5>
+                  <p class="card-text">У всех есть книга, которая их изменила, это моя.</p>
+                  <a href="https://www.litres.ru/ayn-rend/atlant-raspravil-plechi/" class="btn btn-primary">Читать</a>
+                </div> {# card.body - 1 #}
+              </div> {# card #}
+            </div> {# col #}
+            <div class="col"> {# second #}
+              <div class="card">
+                <img src="https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/1367809/02ftKNZYwv3Nm6TpMPlnQ.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">11.22.63</h5>
+                  <p class="card-text">Можно не только посмотреть, но и прочитать.</p>
+                  <a href="https://clck.ru/329Un8" class="btn btn-primary">Читать</a>
+                </div> {# card.body - 2 #}
+              </div> {# card #}
+            </div> {# col #}
+            <div class="col"> {# third #}
+              <div class="card">
+                <img src="https://fb2knigi.ru/wp-content/uploads/2020/04/hoking-kratkaya.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Краткая история времени</h5>
+                  <p class="card-text">ЭТО ПРОСТО КОСМОС</p>
+                  <a href="https://clck.ru/329UoZ" class="btn btn-primary">Читать</a>
+                </div> {# card.body - 3 #}
+              </div> {# card #}
+            </div> {# col #}
+          </div> {# row #}
+        </div> {# container #}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

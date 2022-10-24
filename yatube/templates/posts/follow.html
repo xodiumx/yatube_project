@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Лента подписок{% endblock %}
+{% block content %}
+{% load cache %}
+<div class="container py-5">     
+  <h1>Лента подписок</h1>
+  <article>
+    {% cache 20 index_follow with page_obj %}
+    {% include 'includes/switcher.html' %}
+    {% for post in page_obj %}
+      {% include 'includes/output_of_posts.html' %}
+        {% if post.group %} 
+            <a href="{% url 'posts:group_list' post.group.slug %}">
+              <button type="button" class="btn btn-dark btn-sm">
+                все записи группы
+              </button>
+            </a>
+        {% endif %}
+            <a href="{% url 'posts:post_detail' post.id %}">
+              <button type="button" class="btn btn-dark btn-sm">
+                подробная информация
+              </button> 
+            </a>  
+        {% if not forloop.last %}<hr>{% endif %}
+      {% endfor %}
+    {% endcache %} 
+  {% include 'includes/paginator.html' %}
+  </article>
+</div>      
+{% endblock %}

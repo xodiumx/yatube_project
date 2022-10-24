@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Подписчики{% endblock %}
+{% block content %}
+<div class="container py-5">     
+  <h1>Подписчики - {{ count_of_subs }}</h1>
+  <article>
+    {% include 'includes/switcher_profile.html' %}
+        {% for sub in page_obj %}
+        <a href="{% url 'posts:profile' sub.user %}">
+            <button type="button" class="btn btn-dark btn-sm">
+              {{ sub.user }}
+            </button>
+          </a>
+        {% if not forloop.last %}<hr>{% endif %}
+        {% endfor %}
+  {% include 'includes/paginator.html' %}
+  </article>
+</div>      
+{% endblock %}

@@ -1,7 +1,10 @@
- <!-- templates/base.html -->
+<!-- templates/base.html -->
+{% load static %}
 <!DOCTYPE html> 
 <html lang="ru">          
   <head>      
+    {% include 'includes/meta.html' %}
+    <title>{% block title %}{% endblock %}</title>
   </head>
   <body>       
     <header>
@@ -9,7 +12,7 @@
     </header>
     <main>
         {% block content %}
-        $%#^%$#@%#%@%$%
+          404.exe 
         {% endblock %}
     </main>
     <footer>

@@ -51,7 +51,7 @@ class Post(CreatedModel):
     )
 
     class Meta:
-        ordering = ('created',)
+        ordering = ('-created',)
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
 
@@ -78,7 +78,7 @@ class Comment(CreatedModel):
     )
 
     class Meta:
-        ordering = ('created',)
+        ordering = ('-created',)
 
 
 class Follow(models.Model):

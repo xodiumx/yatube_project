@@ -1,40 +1,45 @@
 from django.urls import path
-from . import views
+
+from .views import (AddComment, FollowAndUnfollowProfile, FollowIndex,
+                    GroupPosts, Index, PostCreate, PostDelete, PostDetail,
+                    PostEdit, Profile, Subscribers, Subscriptions)
 
 app_name = 'posts'
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('group/<slug>/', views.group_posts, name='group_list'),
-    path('profile/<str:username>/', views.profile, name='profile'),
-    path('posts/<int:post_id>/', views.post_detail, name='post_detail'),
+    path('', Index.as_view(), name='index'),
+    path('group/<slug>/', GroupPosts.as_view(), name='group_list'),
+    path('profile/<str:username>/', Profile.as_view(), name='profile'),
+    path('posts/<int:post_id>/', PostDetail.as_view(), name='post_detail'),
     path(
         'posts/<int:post_id>/comment/',
-        views.add_comment,
+        AddComment.as_view(),
         name='add_comment',
     ),
-    path('create/', views.post_create, name='post_create'),
-    path('posts/<int:post_id>/edit/', views.post_edit, name='post_edit'),
-    path('posts/<int:post_id>/delete/', views.post_delete, name='post_delete'),
-    path('follow/', views.follow_index, name='follow_index'),
+    path('create/', PostCreate.as_view(), name='post_create'),
+    path('posts/<int:post_id>/edit/',
+         PostEdit.as_view(), name='post_edit'),
+    path('posts/<int:post_id>/delete/',
+         PostDelete.as_view(), name='post_delete'),
+    path('follow/', FollowIndex.as_view(), name='follow_index'),
     path(
         'profile/<str:username>/follow/',
-        views.profile_follow,
+        FollowAndUnfollowProfile.as_view(),
         name='profile_follow'
     ),
     path(
         'profile/<str:username>/unfollow/',
-        views.profile_unfollow,
+        FollowAndUnfollowProfile.as_view(),
         name='profile_unfollow'
     ),
     path(
         'profile/<str:username>/subscribers/',
-        views.subscribers,
+        Subscribers.as_view(),
         name='subscribers'
     ),
     path(
         'profile/<str:username>/subscriptions/',
-        views.subscriptions,
+        Subscriptions.as_view(),
         name='subscriptions'
     ),
 ]
